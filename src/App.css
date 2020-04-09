@@ -1,38 +1,174 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 66px;
+  color: #2f3e57;
+  background: #af9a7d;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  /* background: #af9a7d; */
+  background: rgb(175, 154, 125);
+  background: rgb(175, 154, 125);
+  background: linear-gradient(
+    90deg,
+    rgba(175, 154, 125, 1) 0%,
+    rgba(43, 13, 71, 0.8757878151260504) 100%
+  );
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+.nav-header {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.nav-header h3 {
+  font-size: 1.7em;
+  line-height: 1;
+  margin-bottom: 1em;
+  color: rgb(43, 13, 71);
+}
+.nav-icon {
+  font-size: 3rem;
+  color: rgba(211, 84, 0, 0.822);
+}
+.nav-icon:hover {
+  color: rgba(233, 66, 16, 0.822);
+}
+
+/* end of Navbar */
+
+.hero {
+  min-height: calc(100vh - 66px);
+  background: linear-gradient(
+      rgba(190, 198, 196, 0.091),
+      rgba(143, 171, 196, 0.167)
+    ),
+    url("./images/architecture-riyadh.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.banner {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  color: #af9a7d;
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: #af9a7d;
+  margin: 1.7rem auto;
+}
+.banner h1 {
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #152644;
+  background: #af9a7d;
+  padding: 0.4rem 0.9rem;
+  border: 3px solid #152644;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button span {
+  color: #152644;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .banner {
+    padding: 2rem 3rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
   }
 }
