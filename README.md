@@ -3,7 +3,9 @@
 This Project is using Advice Slip JSON API (https://api.adviceslip.com/)
 YouTube Tutorial bei JavaScript Mastery (https://www.youtube.com/watch?v=o5CdCETh8cQ)
 
-### ------------------
+### Project Website
+
+App was deployed and hostet on netlify.com (https://supermoonday-advice.netlify.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
