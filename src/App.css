@@ -19,7 +19,6 @@ body {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  /* background: #af9a7d; */
   background: rgb(175, 154, 125);
   background: rgb(175, 154, 125);
   background: linear-gradient(
@@ -33,7 +32,6 @@ body {
 }
 .nav-header {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .nav-header h3 {
@@ -49,7 +47,6 @@ body {
 .nav-icon:hover {
   color: rgba(233, 66, 16, 0.822);
 }
-
 /* end of Navbar */
 
 .hero {

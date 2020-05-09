@@ -8,7 +8,6 @@ export class App extends Component {
     advice: "",
   };
   componentDidMount() {
-    console.log("component did mount");
     this.fetchAdvice();
   }
 
@@ -16,9 +15,7 @@ export class App extends Component {
     axios
       .get("https://api.adviceslip.com/advice")
       .then((responce) => {
-        // destructuring responce data
         const { advice } = responce.data.slip;
-        console.log(advice);
         this.setState({ advice });
       })
       .catch((error) => {
@@ -26,20 +23,14 @@ export class App extends Component {
       });
   };
   render() {
-    // destructuring
     const { advice } = this.state;
     return (
       <div className="hero">
         <nav className="navbar">
           <div className="nav-center">
             <div className="nav-header">
-              {/* <h3>
-                Super{"{Moon"}
-                {"}"}Day Advice
-              </h3> */}
               <GiMoonClaws className="nav-icon" />
               <h3>SuperMoonDayAdvice</h3>
-              {/* <span></span> */}
             </div>
           </div>
         </nav>
